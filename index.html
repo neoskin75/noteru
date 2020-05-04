@@ -30,6 +30,18 @@
 	<link rel="stylesheet" href="style.css">
 	<!-- Go to www.addthis.com/dashboard to customize your tools -->
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eafa142e01dda95"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165426461-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-165426461-1');
+	</script>
+
 </head>
 
 <body>
@@ -104,11 +116,13 @@
 		</div>
 	</div>
 	<!--box end-->
+	
+	
 	<div id="webcam-container"></div>
-
+	
 	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-
+	
 	<!--box script start-->
 	<script>
 		function readURL(input) {
@@ -143,11 +157,13 @@
 		});
 	</script>
 	<!--box script end-->
+	
+	
 	<script type="text/javascript">
 		// More API functions here:
 		// https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 		// the link to your model provided by Teachable Machine export panel
-		const URL = "https://teachablemachine.withgoogle.com/models/xlxZhrlI9/";
+		const URL = "https://teachablemachine.withgoogle.com/models/Haa2loqQ8/";
 		let model, webcam, labelContainer, maxPredictions;
 		// Load the image model and setup the webcam
 		async function init() {
@@ -178,35 +194,42 @@
 			console.log(prediction[0].className);
 			var resultmessege
 			switch (prediction[0].className) {
-				case "1":
-					resultmessege = "<b><h2>あなたは上位1％超モテ男</h2></b>"
+				case "a":
+					resultmessege = "<b><h2>1あなたは上位1％超モテ男</h2></b>"
 					break;
-				case "2":
-					resultmessege = "<b><h2>あなたは可愛いタイプのモテ男</h2></b>"
+				case "b":
+					resultmessege = "<b><h2>1あなたは可愛いタイプのモテ男</h2></b>"
 					break;
-				case "3":
-					resultmessege = "<b><h2>あなたはイケメン</h2></b>"
+				case "c":
+					resultmessege = "<b><h2>1あなたはイケメン</h2></b>"
 					break;
-				case "4":
-					resultmessege = "<b><h2>あなたはモテる中年男性</h2></b>"
+				case "d":
+					resultmessege = "<b><h2>1あなたはモテる中年男性</h2></b>"
 					break;
-				case "5":
-					resultmessege = "<b><h2>あなたは普通の男性</h2></b>"
+				case "e":
+					resultmessege = "<b><h2>1あなたは普通の男性</h2></b>"
 					break;
-				case "6":
-					resultmessege = "<b><h2>あなたはモテない男性</h2></b>"
+				case "f":
+					resultmessege = "<b><h2>1あなたはモテない男性</h2></b>"
 					break;
 				default:
-					resultmessege = "<b><h2>わからない</h2></b>"
+					resultmessege = "<b><h2>1わからない</h2></b>"
 			}
 			$('.result-message').html(resultmessege);
 			for (let i = 0; i < maxPredictions; i++) {
 				const classPrediction =
-					prediction[i].className.replace('1', '上位1％モテ男').replace('2', '可愛い美少年').replace('3', 'イケメン').replace('4', 'イケ中年男').replace('5', '普通の男').replace('6', 'モテない男') + ": " + (prediction[i].probability.toFixed(2)) * 100 + "%";
+					prediction[i].className.replace('a', '上位1％モテ男').replace('b', '可愛い美少年').replace('c', 'イケメン').replace('d', 'イケ中年男').replace('e', '普通の男').replace('f', 'モテない男') + ": " + (prediction[i].probability.toFixed(2)) * 100 + "%";
 				labelContainer.childNodes[i].innerHTML = classPrediction;
 			}
 		}
 	</script>
+	
+	
+	
+	
+	
+
+
 
 	<br>
 	<br>
