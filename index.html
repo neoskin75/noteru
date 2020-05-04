@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
-	<title>부트스트랩 101 템플릿</title>
+	<title>あなたはどんな人⁈</title>
 
 	<!-- 부트스트랩 -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -172,30 +172,30 @@
 			var resultmessege
 			switch (prediction[0].className) {
 				case "1":
-					resultmessege = "당신은 초절정인기남"
+					resultmessege = "あなたは上位1％超モテ男"
 					break;
 				case "2":
-					resultmessege = "당신은 귀여운인기남"
+					resultmessege = "あなたは可愛いタイプのモテ男"
 					break;
 				case "3":
-					resultmessege = "당신은 훈남"
+					resultmessege = "あなたはイケメン"
 					break;
 				case "4":
-					resultmessege = "당신은 중년의인기남"
+					resultmessege = "あなたはモテる中年男性"
 					break;
 				case "5":
-					resultmessege = "당신은 평범한남"
+					resultmessege = "あなたは普通の男性"
 					break;
 				case "6":
-					resultmessege = "당신은 문제적인남"
+					resultmessege = "あなたはモテない男性"
 					break;
 				default:
-					resultmessege = "알수없음"
+					resultmessege = "わからない"
 			}
 			$('.result-message').html(resultmessege);
 			for (let i = 0; i < maxPredictions; i++) {
 				const classPrediction =
-					prediction[i].className.replace('1', '초절정').replace('2', '귀염둥이').replace('3', '훈남').replace('4', '중년남').replace('5', '평범').replace('6', '못생김') + ": " + (prediction[i].probability.toFixed(2)) * 100 + "%";
+					prediction[i].className.replace('1', '上位1％モテ男').replace('2', '可愛い美少年').replace('3', 'イケメン').replace('4', 'イケ中年男').replace('5', '普通の男').replace('6', 'モテない男') + ": " + (prediction[i].probability.toFixed(2)) * 100 + "%";
 				labelContainer.childNodes[i].innerHTML = classPrediction;
 			}
 		}
