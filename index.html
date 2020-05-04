@@ -218,7 +218,7 @@
 			$('.result-message').html(resultmessege);
 			for (let i = 0; i < maxPredictions; i++) {
 				const classPrediction =
-					prediction[i].className.replace('a', '上位1％モテ女').replace('b', '可愛い美少女').replace('c', 'モテギャル').replace('d', 'イケ中年女').replace('e', '魅力的な女性').replace('f', 'モテない女性') + ": " + (prediction[i].probability.toFixed(2)) * 100 + "%";
+					prediction[i].className.replace('a', '上位1％モテ女性').replace('b', '可愛い美少女').replace('c', 'モテギャル').replace('d', 'イケ中年女性').replace('e', '魅力的な女性').replace('f', 'モテない女性') + ": " + (prediction[i].probability.toFixed(2)) * 100 + "%";
 				labelContainer.childNodes[i].innerHTML = classPrediction;
 			}
 		}
