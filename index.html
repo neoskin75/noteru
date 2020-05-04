@@ -195,30 +195,31 @@
 			var resultmessege
 			switch (prediction[0].className) {
 				case "a":
-					resultmessege = "<b><h2>あなたは上位1％超女性</h2></b>"
+					resultmessege = "<b><h2>あなたは上位1％超モテ女性</h2></b><br>似ている芸能人 : 北川景子, 佐々木希, 石原さとみ, 新垣結衣<br><br>"
 					break;
 				case "b":
-					resultmessege = "<b><h2>あなたは可愛いタイプのモテ女性</h2></b>"
+					resultmessege = "<b><h2>あなたは可愛いモテ女性</h2></b><br>似ている芸能人 : 川口春奈, 白間美瑠, 吉岡里帆, 武井咲<br><br>"
 					break;
 				case "c":
-					resultmessege = "<b><h2>あなたはモテギャル</h2></b>"
+					resultmessege = "<b><h2>あなたはモテギャル</h2></b><br>似ている芸能人 : 長谷川潤, 黒木メイサ, 山本美月, 沢尻エリカ<br><br>"
 					break;
 				case "d":
-					resultmessege = "<b><h2>あなたはモテる中年女性</h2></b>"
+					resultmessege = "<b><h2>あなたはモテる中年女性</h2></b><br>似ている芸能人 : 長澤まさみ, 松嶋菜々子, 竹内結子, 綾瀬はるか<br><br>"
 					break;
 				case "e":
-					resultmessege = "<b><h2>あなたは魅力的な普通の女性</h2></b>"
+					resultmessege = "<b><h2>あなたは魅力的な普通の女性</h2></b><br>似ている芸能人 : 黒木瞳, 戸田恵梨香, 夏帆, 井上真央<br><br>"
 					break;
 				case "f":
-					resultmessege = "<b><h2>あなたはモテない女性</h2></b>"
+					resultmessege = "<b><h2>あなたはモテない女性</h2></b><br>似ている芸能人 : オカリナ, 安藤なつ, 近藤春菜, イモトアヤコ<br><br>"
 					break;
 				default:
 					resultmessege = "<b><h2>1わからない</h2></b>"
 			}
 			$('.result-message').html(resultmessege);
+	
 			for (let i = 0; i < maxPredictions; i++) {
 				const classPrediction =
-					prediction[i].className.replace('a', '上位1％モテ女性').replace('b', '可愛い美少女').replace('c', 'モテギャル').replace('d', 'イケ中年女性').replace('e', '魅力的な女性').replace('f', 'モテない女性') + ": " + (prediction[i].probability.toFixed(2)) * 100 + "%";
+					prediction[i].className.replace('a', '上位1％モテ女性').replace('b', '可愛い美少女').replace('c', 'モテギャル').replace('d', 'モテ中年女性').replace('e', '魅力的な女性').replace('f', 'モテない女性') + ": " + (prediction[i].probability.toFixed(2)) * 100 + "%";
 				labelContainer.childNodes[i].innerHTML = classPrediction;
 			}
 		}
