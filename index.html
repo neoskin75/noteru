@@ -172,25 +172,25 @@
 			var resultmessege
 			switch (prediction[0].className) {
 				case "1":
-					resultmessege = "あなたは上位1％超モテ男"
+					resultmessege = "<b><h2>あなたは上位1％超モテ男</h2></b>"
 					break;
 				case "2":
-					resultmessege = "あなたは可愛いタイプのモテ男"
+					resultmessege = "<b><h2>あなたは可愛いタイプのモテ男</h2></b>"
 					break;
 				case "3":
-					resultmessege = "あなたはイケメン"
+					resultmessege = "<b><h2>あなたはイケメン</h2></b>"
 					break;
 				case "4":
-					resultmessege = "あなたはモテる中年男性"
+					resultmessege = "<b><h2>あなたはモテる中年男性</h2></b>"
 					break;
 				case "5":
-					resultmessege = "あなたは普通の男性"
+					resultmessege = "<b><h2>あなたは普通の男性</h2></b>"
 					break;
 				case "6":
-					resultmessege = "あなたはモテない男性"
+					resultmessege = "<b><h2>あなたはモテない男性</h2></b>"
 					break;
 				default:
-					resultmessege = "わからない"
+					resultmessege = "<b><h2>わからない</h2></b>"
 			}
 			$('.result-message').html(resultmessege);
 			for (let i = 0; i < maxPredictions; i++) {
